@@ -145,12 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 756886137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1422e98444b344780bf176d183d3f6, type: 3}
+  m_Script: {fileID: 11500000, guid: fd86f60f8fc7ad34c80275f8a1f7b1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stats
   _health: 100
-  _attack: 20
-  _cooldown: 1
   _maxHealth: 100
 --- !u!4 &756886139
 Transform:
@@ -396,6 +394,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1606042427208858301, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606042427208858301, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _stats
       value: 
       objectReference: {fileID: 756886138}
@@ -555,6 +557,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 756886138}
     - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _playerStats
       value: 

@@ -1,24 +1,12 @@
 using TMPro;
 using UnityEngine;
 
-public class HealthUIText : MonoBehaviour
+public class HealthUIText : HealthDisplayBase
 {
-    [SerializeField] private Stats _playerStats;
     [SerializeField] private TextMeshProUGUI _healthText;
 
-    private void OnEnable()
+    protected override void OnHealthChanged()
     {
-        _playerStats.HealthChanged += UpdateHealthText;
-        UpdateHealthText();
-    }
-
-    private void OnDisable()
-    {
-        _playerStats.HealthChanged -= UpdateHealthText;
-    }
-
-    private void UpdateHealthText()
-    {
-            _healthText.text = $"{_playerStats.Health}/{_playerStats.MaxHealth}";        
+        _healthText.text = $"{_stats.Health}/{_stats.MaxHealth}";
     }
 }

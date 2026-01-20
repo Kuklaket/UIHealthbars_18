@@ -2,12 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthUISmoothSlider : MonoBehaviour
+public class HealthUISmoothSlider : HealthDisplayBase
 {
-    [SerializeField] private Stats _stats;
     [SerializeField] private Slider _slider;
-    [SerializeField] private float _speed = 15f;
+    [SerializeField] private float _speed = 20f;
 
+    private float _targetThreshold = 0.01f;
     private float _currentDisplay;
     private Coroutine _coroutine;
 
@@ -19,20 +19,20 @@ public class HealthUISmoothSlider : MonoBehaviour
         _slider.maxValue = _stats.MaxHealth;
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable(); 
         _currentDisplay = _stats.Health;
         _slider.value = _currentDisplay;
-        _stats.HealthChanged += UpdateHealth;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
-        _stats.HealthChanged -= UpdateHealth;
+        base.OnDisable();
         if (_coroutine != null) StopCoroutine(_coroutine);
     }
 
-    private void UpdateHealth()
+    protected override void OnHealthChanged()
     {
         if (_coroutine != null) StopCoroutine(_coroutine);
         _coroutine = StartCoroutine(UpdateHealthSmoothly());
@@ -42,10 +42,11 @@ public class HealthUISmoothSlider : MonoBehaviour
     {
         float target = _stats.Health;
 
-        while (Mathf.Abs(_currentDisplay - target) > 0.01f)
+        while (Mathf.Abs(_currentDisplay - target) > _targetThreshold)
         {
             _currentDisplay = Mathf.MoveTowards(_currentDisplay, target, _speed * Time.deltaTime);
             _slider.value = _currentDisplay;
+
             yield return null;
         }
 
