@@ -1,6 +1,6 @@
 public class HealerButton : HealthChange
 {
-    protected override void OnButtonClick()
+    protected override void ExecuteHealthChange()
     {
         _playerStats.AddHealth(_value);
     }

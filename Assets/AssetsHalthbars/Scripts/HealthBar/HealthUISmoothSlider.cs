@@ -32,7 +32,7 @@ public class HealthUISmoothSlider : HealthDisplayBase
         if (_coroutine != null) StopCoroutine(_coroutine);
     }
 
-    protected override void OnHealthChanged()
+    protected override void UpdateHealthDisplay()
     {
         if (_coroutine != null) StopCoroutine(_coroutine);
         _coroutine = StartCoroutine(UpdateHealthSmoothly());

@@ -6,15 +6,15 @@ public abstract class HealthDisplayBase : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        _stats.HealthChanged += OnHealthChanged;
-        OnHealthChanged();
+        _stats.HealthChanged += UpdateHealthDisplay;
+        UpdateHealthDisplay();
     }
 
     protected virtual void OnDisable()
     {
-        _stats.HealthChanged -= OnHealthChanged;
+        _stats.HealthChanged -= UpdateHealthDisplay;
     }
 
-    protected abstract void OnHealthChanged();
+    protected abstract void UpdateHealthDisplay();
 }
 

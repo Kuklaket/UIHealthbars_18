@@ -15,16 +15,16 @@ public abstract class HealthChange : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(OnButtonClick);
+        _button.onClick.AddListener(ExecuteHealthChange);
     }
 
     private void OnDisable()
     {
         if (_button != null)
         {
-            _button.onClick.RemoveListener(OnButtonClick);
+            _button.onClick.RemoveListener(ExecuteHealthChange);
         }
     }
 
-    protected abstract void OnButtonClick();
+    protected abstract void ExecuteHealthChange();
 }
