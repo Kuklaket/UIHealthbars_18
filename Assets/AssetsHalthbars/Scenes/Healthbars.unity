@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd86f60f8fc7ad34c80275f8a1f7b1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stats
-  _health: 100
-  _maxHealth: 100
+  _value: 100
+  _maxValue: 100
 --- !u!4 &756886139
 Transform:
   m_ObjectHideFlags: 0
@@ -244,6 +244,17 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!114 &1558680286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7596401175549157892, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+  m_PrefabInstance: {fileID: 4351162822088418603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &2143889510
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +416,10 @@ PrefabInstance:
       propertyPath: _slider
       value: 
       objectReference: {fileID: 4351162822088418604}
+    - target: {fileID: 1606042427208858301, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _healthSystem
+      value: 
+      objectReference: {fileID: 756886138}
     - target: {fileID: 2998126102799519623, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -434,11 +449,27 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5586701478656560052, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _statsH
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 5586701478656560052, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _playerStats
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 5586701478656560052, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _healthSystem
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 5706048146377391022, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _statsH
       value: 
       objectReference: {fileID: 756886138}
     - target: {fileID: 5706048146377391022, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _playerStats
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 5706048146377391022, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _healthSystem
       value: 
       objectReference: {fileID: 756886138}
     - target: {fileID: 5910445867300078161, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
@@ -463,6 +494,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6799743813069711784, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _stats
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 6799743813069711784, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _healthSystem
       value: 
       objectReference: {fileID: 756886138}
     - target: {fileID: 7940498451267403669, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
@@ -558,11 +593,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _text
+      value: 
+      objectReference: {fileID: 1558680286}
+    - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _stats
       value: 
       objectReference: {fileID: 756886138}
     - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
       propertyPath: _playerStats
+      value: 
+      objectReference: {fileID: 756886138}
+    - target: {fileID: 8829538727269858927, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}
+      propertyPath: _healthSystem
       value: 
       objectReference: {fileID: 756886138}
     - target: {fileID: 9113525356209806707, guid: 52b6851e2e1e5da43b0c1bd04af36c50, type: 3}

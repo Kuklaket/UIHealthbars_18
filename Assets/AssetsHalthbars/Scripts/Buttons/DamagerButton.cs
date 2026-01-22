@@ -1,7 +1,7 @@
-public class DamagerButton : HealthChange
+public class DamagerButton : HealthChanger
 {
     protected override void ExecuteHealthChange()
     {
-        _playerStats.GetDamage(_value);
+        _healthSystem.GetDamage(_value);
     }
 }

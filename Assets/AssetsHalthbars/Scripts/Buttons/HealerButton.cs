@@ -1,7 +1,7 @@
-public class HealerButton : HealthChange
+public class HealerButton : HealthChanger
 {
     protected override void ExecuteHealthChange()
     {
-        _playerStats.AddHealth(_value);
+        _healthSystem.AddHealth(_value);
     }
 }

@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class HealthChange : MonoBehaviour
+public abstract class HealthChanger : MonoBehaviour
 {
-    [SerializeField] protected HealthSystem _playerStats;
+    [SerializeField] protected HealthSystem _healthSystem;
     [SerializeField] protected int _value = 10;
 
     private Button _button;
